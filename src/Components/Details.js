@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css';
+
 
 class Details extends React.Component {
     constructor() {
@@ -10,12 +12,12 @@ class Details extends React.Component {
     }
 
     componentDidMount() {
-        axios(`http://localhost:8082/blog/getblog/${this.props.match.params.Id}`)
+        axios(`http://localhost:8082/blog/getblog/${this.props.match.params.blogId}`)
             .then(res => this.setState({ blog: res.data.blog }))
             .catch(err => console.log(err))
     }
 
-    back = () => {
+    handleBack = () => {
         this.props.history.push("/");
     }
 
@@ -26,11 +28,13 @@ class Details extends React.Component {
                 <table className="table table-bordered table-hover table-striped">
                     <tbody>
                         <tr>
-                            <td className="table-data" colSpan="4">Blogs</td>
+                            <td className="header" colSpan="4">
+                                Blog's
+                            </td>
                         </tr>
-                        <tr className="table-header">
-                            <td>S.NO</td>
-                            <td>Blogs</td>
+                        <tr className="sub-header">
+                            <td>S.No</td>
+                            <td>Blog</td>
                         </tr>
                         <tr>
                             <td>{blog._id}</td>
@@ -38,8 +42,8 @@ class Details extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-                <button className="btn btn-warning" onClick={this.back}>Back</button>
-            </div>
+                <button className="btn btn-warning button-margin" onClick={this.handleBack}>Back</button>
+            </div >
         )
     }
 }

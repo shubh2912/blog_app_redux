@@ -8,7 +8,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Route exact path="/" component={Home} />
-      <Route path="/details/:Id" component={Details} />
+      <Route path="/details/:blogId" component={Details} />
     </BrowserRouter>
   );
 }

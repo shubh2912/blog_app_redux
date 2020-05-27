@@ -24,26 +24,27 @@
   color: white;
 }
 
+.button-margin {
+  margin-left: 5px;
+}
+
+.header {
+  text-align: center;
+  background-color: coral;
+  font-style: italic;
+  font-size: 25px;
+  color: mediumvioletred;
+}
+
+.sub-header {
+  text-align: center;
+  background-color: antiquewhite;
+  font-style: italic;
+  color: mediumvioletred;
+}
+
 .App-link {
   color: #61dafb;
-}
-
-.btn-margin {
-  margin-right: 5px;
-}
-
-.table-data {
-  text-align: center;
-  background-color: orange;
-  color: white
-}
-
-.table-header {
-  background-color: bisque;
-}
-
-.modal-header {
-  text-align: center;
 }
 
 @keyframes App-logo-spin {

@@ -142,7 +142,7 @@ class Home extends React.Component {
                     style={customStyles}
                 >
                     <h3>Add Blog</h3>
-                    <label>Blog : </label>
+                    <label>Blog Msg : </label>
                     <input type="text" value={addBlogText} onChange={this.handleChangeAddBlogText} />
                     <button className="btn btn-success button-margin" onClick={this.handleAdd}>Add</button>
                     <button className="btn btn-danger button-margin" onClick={this.handleAddCancel}>Cancel</button>
@@ -152,7 +152,7 @@ class Home extends React.Component {
                     style={customStyles}
                 >
                     <h3>Update Blog</h3>
-                    <label>Blog : </label>
+                    <label>Blog Msg : </label>
                     <input type="text" value={updateBlogText} onChange={this.handleChangeUpdateBlogText} />
                     <button className="btn btn-success button-margin" onClick={this.handleUpdate}>Update</button>
                     <button className="btn btn-danger button-margin" onClick={this.handleUpdateCancel}>Cancel</button>
